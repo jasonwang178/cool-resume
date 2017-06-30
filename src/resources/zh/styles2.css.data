@@ -1,0 +1,48 @@
+
+/**
+ * 左边的文本可以加一些效果
+ */
+.resumeEditor{
+  padding: 2em;
+}
+.resumeEditor h2{
+  display: inline-block;
+  border-bottom: 1px solid;
+  margin: 1em 0 .5em;
+}
+.resumeEditor ul,.resumeEditor ol{
+  list-style: none;
+}
+.resumeEditor ul> li::before{
+  content: '•';
+  margin-right: .5em;
+}
+.resumeEditor ol {
+  counter-reset: section;
+}
+.resumeEditor ol li::before {
+  counter-increment: section;
+  content: counters(section, ".") " ";
+  margin-right: .5em;
+}
+.resumeEditor li {
+  margin: 3px 0;
+}
+.resumeEditor blockquote {
+  margin: 1em;
+  padding: .5em;
+  background: #f5efd9;
+}
+.resumeEditor a{
+  color: #0366d6;
+}
+
+/**
+ * 最后加个，更炫酷的边框
+ */
+.resumeEditor:hover {
+  box-shadow: 0px 0px 40px 5px rgba(255,255,255,0.4);
+}
+.styleEditor:hover {
+  box-shadow: 0px 0px 40px 5px rgba(255,255,255,0.4);
+}

@@ -1,0 +1,103 @@
+/**
+ *
+ * Hey. My name's Jason Wong. I'm a technical geek and an occasional freelance contractor.
+ *
+ * This is my dynamic resume show case.
+ */
+
+/**
+ * Let's begin. We start by animating... well, everything.
+ */
+* {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+/**
+ * That didn't do much. But you'll see.
+ *
+ * Black on white is really boring,
+ * so let's do something about it.
+ */
+html {
+  color: rgb(222,222,222);
+  background: rgb(63, 82, 99);
+}
+
+/* Let's make the font better. */
+body * {
+  font-family: "SourceCodePro", "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/**
+ * That's better. Sorry about your eyes.
+ *
+ * Working in this big empty space is tough.
+ *
+ * I'm going to make a nice area for us to work in.
+ */
+.styleEditor {
+  overflow: auto;
+  background: rgb(48, 48, 48);
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  box-shadow: -4px 4px 2px 0 rgba(0,0,0,0.3);
+  padding: .5em;
+  margin: .5em;
+  width: 48vw; height: 98vh;
+  -webkit-transform: translateX(100%);
+  position: fixed; right: 48%; top: 0;
+}
+
+/**
+ * Make it a bit tridimensional.
+ */
+
+.styleEditor pre {
+  white-space: pre-wrap;
+  outline: 0;
+}
+
+body {
+  -webkit-perspective: 1024px;
+}
+
+.styleEditor {
+  -webkit-transform: translateX(100%) rotateY(-8deg);
+  -webkit-transform-origin: right;
+}
+
+/**
+ * This is good, but all the text is white!
+ * Let's make it even more readable.
+ */
+.token.selector{ color: rgb(166, 226, 46); }
+.token.property{ color: rgb(102, 217, 239); }
+.token.punctuation{ color: yellow; margin-left: 2px; }
+.token.function{ color: rgb(249, 38, 114); }
+
+/**
+ * So, let's see my resume. That's why you're here, right?
+ * I can't imagine you'd come just to see the pretty colors. ;-)
+ */
+.resumeEditor{
+  font-size: 16px;
+  position: fixed; left: 0; top: 0;
+  padding: .5em;
+  margin: .5em;
+  box-shadow: -4px 4px 2px 0 rgba(0,0,0,0.3);
+  width: 51vw; height: 98vh;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  /* background: rgb(48, 48, 48); */
+  background: white;
+  color: #222;
+  overflow: auto;
+  -webkit-transform: translateX(0%) rotateY(8deg);
+  -webkit-transform-origin: left;
+  white-space: pre-wrap;
+  outline: 0;
+}
+
+/* OK, now let me write the resume... */

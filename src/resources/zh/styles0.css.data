@@ -1,0 +1,106 @@
+/**
+ *
+ * 你好，我叫Jason Wong <jasonwang178 at gmail dot com>
+ *
+ * 这里是我用简陋的前端知识显摆个人简历的小平台
+ */
+
+/**
+ * 让我们开始吧！接下来一切都会是动画...
+ */
+* {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+/**
+ * 然而这并起不了什么作用。
+ *
+ * 白底黑字着实很无聊，
+ * 让我们做点改变。
+ */
+html {
+  color: rgb(222,222,222);
+  background: rgb(63, 82, 99);
+}
+
+/* 接下来让字体更优雅一些 */
+body * {
+  font-family: "SourceCodePro", "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/**
+ * 现在好多了，很抱歉刚刚让你的眼睛备受煎熬。
+ *
+ * 在这么大的空间里面写样式，很浪费也显得很粗糙
+ *
+ * 接下来，让我制作一个更漂亮的样式书写空间吧。
+ */
+.styleEditor {
+  overflow: auto;
+  background: rgb(48, 48, 48);
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  box-shadow: -4px 4px 2px 0 rgba(0,0,0,0.3);
+  padding: .5em;
+  margin: .5em;
+  width: 48vw; height: 98vh;
+  -webkit-transform: translateX(100%);
+  position: fixed; right: 48%; top: 0;
+}
+
+/**
+ * 让它看上去更立体...
+ */
+
+.styleEditor pre {
+  white-space: pre-wrap;
+  outline: 0;
+}
+
+.styleEditor {
+  -webkit-transform: translateX(100%) rotateY(-8deg);
+  -webkit-transform-origin: right;
+}
+
+body {
+  -webkit-perspective: 1024px;
+}
+
+
+/**
+ * 嗯，看起来不错，不过所有的字都是白色，
+ *
+ * 来点语法着色如何？
+ */
+.token.selector{ color: rgb(166, 226, 46); }
+.token.property{ color: rgb(102, 217, 239); }
+.token.punctuation{ color: yellow; margin-left: 2px; }
+.token.function{ color: rgb(249, 38, 114); }
+
+/**
+ * 那么来看下我的简历吧。
+ *
+ * 相信您不是只来看这些漂亮文字的吧？;-)
+ */
+.resumeEditor{
+  font-size: 16px;
+  position: fixed; left: 0; top: 0;
+  padding: .5em;
+  margin: .5em;
+  box-shadow: -4px 4px 2px 0 rgba(0,0,0,0.3);
+  width: 51vw; height: 98vh;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  /* background: rgb(48, 48, 48); */
+  background: white;
+  color: #222;
+  overflow: auto;
+  -webkit-transform: translateX(0%) rotateY(8deg);
+  -webkit-transform-origin: left;
+  white-space: pre-wrap;
+  outline: 0;
+}
+
+/* 好了，简历写起来... */
