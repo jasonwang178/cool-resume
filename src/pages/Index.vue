@@ -30,6 +30,7 @@
     position: absolute;
   }
   .navi{
+    z-index: 1000;
     position: fixed;
     width: 200px;
     height: 20px;
